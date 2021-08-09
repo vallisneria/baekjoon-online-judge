@@ -1,0 +1,17 @@
+name: dir-name-check
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Check Directory Name
+        uses: batista/lint-filenames@v1.0.0
+        with:
+          path: "./"
+          pattern: "boj_[0-9]{5}_\\S+"

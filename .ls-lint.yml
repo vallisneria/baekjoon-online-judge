@@ -1,0 +1,19 @@
+ls:
+  "boj_*":
+    .dir: regex:boj_[0-9]{2}k
+
+    "boj_*":
+      .dir: regex:boj_[0-9]{5}
+
+      "boj_*":
+        .dir: lowercase
+
+      "*":
+        .file: regex:main\..+
+
+ignore:
+  - .DS_Store
+  - .git
+  - .gitignore
+  - README.md
+  - .ls-lint.yml
